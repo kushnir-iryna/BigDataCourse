@@ -16,4 +16,14 @@ public class Bouquet {
         price += flower.getPrice();
         return this;
     }
+    
+    public Bouquet maxHeight() {
+    	int i;
+    	int max;
+    	max = flowers(0).
+    	for (i=0;i<=flowers.size();i++){
+    		
+    	}
+    	return ;
+    }
 }
