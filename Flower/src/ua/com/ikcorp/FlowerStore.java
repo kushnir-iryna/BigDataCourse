@@ -1,33 +1,22 @@
 package ua.com.ikcorp;
-import java.util.Scanner;
-//Створити ієрархію квітів.Створити з квітів букет. Вивести суму за букет. Знайти найдовшу квітку в букеті. Знайти найсвіжіший букет
-import java.util.Scanner;
 
-public abstract class Flower {
-	double price;
-	double length;
-
-	// Створити ієрархію квітів.Створити з квітів букет. Вивести суму за букет.
-	// Знайти найдовшу квітку в букеті. Знайти найсвіжіший букет
-	Flower(double p, double l) {
-		price = p;
-		length = l;
-	}
+public abstract class FlowerStore {
 
 	public static void main(String[] args) {
-		System.out.println("У продажі є рози та лілії.");
-		System.out.print("Введіть кількість роз ");
-		Scanner s = new Scanner(System.in);
-		int k = s.nextInt();
-		System.out.print("Введіть кількість лілій ");
-		int m = s.nextInt();
-		System.out.println("Кількість квіток у букеті рівна " + (k + m));
+		Rose ros1 = new Rose(36, 40, 1);
+		Rose ros2 = new Rose(50, 60, 5);
+		Lili lili1 = new Lili(30, 20, 5);
 		
-		Flower Buket[] = new Flower[2];
-		Buket[1] = new Rose(10, 12);
-		Buket[2] = new Lili(120, 10);
-		for (int i = 0; i < Buket.length; i++) {
-			System.out.println(Buket[i]);
-		}
+		Bouquet bouquet  = new Bouquet();
+		//Bouquet bouquet= new Bouquet();
+		bouquet.addFlower(ros1).addFlower(ros2).addFlower(lili1);
+		//bouquet.addFlower(ros3).addFlower(ros4).addFlower(lili2);
+		bouquet.DayFlower(ros1).DayFlower(ros2).DayFlower(lili1);
+
+
+		System.out.println(String.format("%.0f - Price of first bouquet", (bouquet.getPrice())));
+
+		System.out.println(String.format("%.2f - Avarage freshness of flowers", (bouquet.getDays())));
+
 	}
 }
