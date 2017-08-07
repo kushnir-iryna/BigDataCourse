@@ -8,7 +8,6 @@ public abstract class FlowerStore {
 		Lili lili1 = new Lili(30, 20, 5);
 		
 		Bouquet bouquet  = new Bouquet();
-		//Bouquet bouquet= new Bouquet();
 		bouquet.addFlower(ros1).addFlower(ros2).addFlower(lili1);
 		//bouquet.addFlower(ros3).addFlower(ros4).addFlower(lili2);
 		bouquet.DayFlower(ros1).DayFlower(ros2).DayFlower(lili1);
