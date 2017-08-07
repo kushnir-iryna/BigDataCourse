@@ -43,7 +43,6 @@ public class Bouquet {
 		
 
 	public Bouquet DayFlower(Flower flower) {
-		flowers.add(flower);
 		days +=( flower.getDays())/flowers.size();
 		return this;
 
