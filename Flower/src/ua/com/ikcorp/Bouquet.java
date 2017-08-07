@@ -1,4 +1,5 @@
 package ua.com.ikcorp;
+
 import java.util.Collections;
 
 import java.util.ArrayList;
@@ -28,22 +29,20 @@ public class Bouquet {
 		price += flower.getPrice();
 		return this;
 	}
-	
-  
-	/*public Bouquet heightFlower(Flower flower) {
-		flower = flowers.getHeight(0);
-		   for(int i = 0; i < flowers.size(); i++){
-		    if (flowers.get(i)[1]>flower[1]) {
-		        flower = flowers.get(i);
-		    }
+
+	public double heightMaxFlower() {
+		double max;
+		max = flowers.get(0).getHeight();
+		for (int i = 0; i < flowers.size(); i++) {
+			if (flowers.get(i).getHeight() > max) {
+				max = flowers.get(i).getHeight();
+			}
 		}
-		   }
-		   return fram;
-		 }*/
-		
+		return max;
+	}
 
 	public Bouquet DayFlower(Flower flower) {
-		days +=( flower.getDays())/flowers.size();
+		days += (flower.getDays()) / flowers.size();
 		return this;
 
 	}
