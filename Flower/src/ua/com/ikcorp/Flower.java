@@ -2,20 +2,49 @@
 package ua.com.ikcorp;
 
 class Flower {
-	double price;
-	double height;
-	double days;
+	private String name;
+	private double price;
+	private double height;
+	private double days;
+	
+	Flower(String name, double price, double height, double days) {
+
+		this.days = days;
+		this.price = price;
+		this.height = height;
+		this.name = name;
+	}
 
 	double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	double getHeight() {
-		return height;
+		return this.height;
 	}
 
 	double getDays() {
-		return days;
+		return this.days;
+	}
+	String getName() {
+		return this.name;
 	}
 
+	void setPrice(double x) {
+		this.price = x;
+	}
+
+	void setHeight(double x) {
+		this.height = x;
+	}
+	
+	void setDays(double x) {
+		this.days = x;
+	}
+	
+	void setName(String x) {
+		this.name =x;
+	}
+
+	
 }

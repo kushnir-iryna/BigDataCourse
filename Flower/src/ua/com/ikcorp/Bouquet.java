@@ -3,6 +3,7 @@ package ua.com.ikcorp;
 import java.util.ArrayList;
 
 public class Bouquet {
+	String name;
 	private double price;
 	private double height;
 	private double days;
@@ -19,6 +20,10 @@ public class Bouquet {
 
 	public double getDays() {
 		return days;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public Bouquet addFlower(Flower flower) {
@@ -38,18 +43,19 @@ public class Bouquet {
 		return max;
 	}
 
+	
 	public double bouquetFreshness() {
 		double avr;
-		double sum=0;
+		double sum = 0;
+		int c=0;
 		for (int i = 0; i < flowers.size(); i++) {
-			sum += flowers.get(i).getDays();
+			if (flowers.get(i).getName() == "Kaktus") {c++;}
+			if (flowers.get(i).getName() != "Kaktus")
+				sum += flowers.get(i).getDays();
 		}
-		avr = sum/flowers.size();
+		avr = sum / (flowers.size()-c);
 		return avr;
-	}
 
-//	public Bouquet DayFlower(Flower flower) {
-//		days += (flower.getDays()) / flowers.size();
-//		return this;
-//	}
+	}
 }
+//mInfoTextView.setText(flowers.contains("Бобик") + "");
